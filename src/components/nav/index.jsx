@@ -12,6 +12,7 @@ import {Queue, Search, List} from '@material-ui/icons';
 
 import Cadastrar from '../cadastro'
 import Calcular from '../calcular'
+import Listagem from '../listagem'
 
 
 function TabPanel(props) {
@@ -88,7 +89,7 @@ export default function FullWidthTabs() {
         </TabPanel>
 
         <TabPanel value={value} index={1} dir={theme.direction}>
-            Listagem das empresas
+            <Listagem />
         </TabPanel>
 
         <TabPanel value={value} index={2} dir={theme.direction}>

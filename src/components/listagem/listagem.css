@@ -1,0 +1,15 @@
+.card{
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.title{
+    background-color: #222;
+    color:#FAFAFA;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.pos{
+    padding: 10px 0;
+}
