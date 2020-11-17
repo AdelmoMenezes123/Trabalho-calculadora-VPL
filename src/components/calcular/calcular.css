@@ -1,0 +1,13 @@
+.calcular{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.textFild{
+    width: 20rem;
+}
+
+
+.textFild:nth-last-child(1){
+    padding-bottom: 5vh;
+}

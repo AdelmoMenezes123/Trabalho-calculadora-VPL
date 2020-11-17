@@ -1,0 +1,13 @@
+.header{
+    background-color: #9900FA;
+    color: #FFF;
+    padding-top: 50px;
+}
+.header__title{
+    padding-bottom: 9px;
+}
+
+img{
+    height: auto;
+    width: 100%;
+}
