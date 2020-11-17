@@ -1,190 +1,45 @@
 import {Container, Grid, Typography , Card, CardContent} from '@material-ui/core'
 import './listagem.css'
 
+import dados from "../../data"
+
 export default ()=>{
 
-    
+    const creatCards = ()=> {
+
+        return dados.map(item=>{
+            return( 
+                <Grid item xs={12} sm={4} key={item.id}>
+                             <Card className="card">
+                                <CardContent>
+                                    <Typography className="title" gutterBottom>
+                                        Empresa: {item.nome}
+                                    </Typography>
+                                    
+                                    <Typography component="h2">
+                                    Fluxo de caixa liquido: {item.fluxoDeCaixa}
+                                    </Typography>
+                                    
+                                    <Typography className="pos">
+                                        Taixa de Desconto: {item.taixaDeDesconto}
+                                    </Typography>
+                                    
+                                    <Typography variant="body2" component="p">
+                                       Tempo de fluxo de caixa: {item.tempoFluxoDeCaixa}
+                                    </Typography>
+                                </CardContent>
+                            </Card>                            
+                        </Grid>
+            )
+        })
+    }    
 
     return(
         <div>
             <Container fixed>
                 <Grid container justify="center" alignItems="center" spacing={5}>
                        
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
-
-                        <Grid item xs={12} sm={4} >
-                             <Card className="card">
-                                <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: .....
-                                    </Typography>
-                                    
-                                    <Typography component="h2">
-                                    Fluxo de caixa liquido: .....
-                                    </Typography>
-                                    
-                                    <Typography className="pos">
-                                        Taixa de Desconto: ...
-                                    </Typography>
-                                    
-                                    <Typography variant="body2" component="p">
-                                       Tempo de fluxo de caixa: ...
-                                    </Typography>
-                                </CardContent>
-                            </Card>                            
-                        </Grid>
+                        {creatCards()}
 
                 </Grid>
             </Container>
