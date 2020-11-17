@@ -12,8 +12,8 @@ export default ()=>{
                 <Grid item xs={12} sm={4} key={item.id}>
                              <Card className="card">
                                 <CardContent>
-                                    <Typography className="title" gutterBottom>
-                                        Empresa: {item.nome}
+                                    <Typography variant="h4" className="title" gutterBottom>
+                                        {item.nome}
                                     </Typography>
                                     
                                     <Typography component="h2">
