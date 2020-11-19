@@ -3,6 +3,11 @@
     max-width: 300px;
 }
 
+.cardContent{
+    background-color: #23b5b5;
+    color: #FAFAFA;
+}
+
 .title{
     background-color: #222;
     color:#FAFAFA;
