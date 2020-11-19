@@ -5,17 +5,38 @@ import './cadastro.css'
 import data from '../../data'
 export default ()=>{
 
-    const [empresa, setEmpresa] = useState()
-    const [fluxo, setFluxo] = useState()
-    const [taxa, setTaxa] = useState()
-    const [tempo, setTempo] = useState()
-
-    const [arr, setArr] = useState({})
-
+    const [empresa, setEmpresa] = useState('')
+    const [fluxo, setFluxo] = useState(0)
+    const [taxa, setTaxa] = useState(0)
+    const [tempo, setTempo] = useState(0)
 
     let cadastro = ()=>{
-        console.log('cadastrado com sucesso')
 
+        let id = 1;
+    
+        let controle = false;
+
+        data.map(d =>{
+            if(d.nome.toUpperCase() != empresa.toUpperCase()){
+                if( id > 0 && id == d.id){
+                    id++;
+                }
+                controle = true;
+            }else{
+                controle = false
+                alert("Erro: Empresa ja existe")
+            }
+        })
+
+        if(controle && empresa.toUpperCase() != '' ){
+            data.push( {id:id, nome:empresa, fluxoDeCaixa:fluxo , taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo})
+            setEmpresa('')
+            setFluxo(0)
+            setTaxa(0)
+            setTempo(0)
+        }else{
+            id--;
+        }
     }
 
     return(
