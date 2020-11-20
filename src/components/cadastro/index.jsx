@@ -29,7 +29,7 @@ export default ()=>{
         })
 
         if(controle && empresa.toUpperCase() != '' ){
-            data.push( {id:id, nome:empresa, fluxoDeCaixa:fluxo , taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo})
+            data.push( {id:id, nome:empresa, fluxoDeCaixa:fluxo.toFixed(2) , taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo})
             setEmpresa('')
             setFluxo(0)
             setTaxa(0)

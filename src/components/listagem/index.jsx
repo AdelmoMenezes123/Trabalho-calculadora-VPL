@@ -17,15 +17,15 @@ export default ()=>{
                                     </Typography>
                                     
                                     <Typography component="h2" variant="h6">
-                                    Fluxo de caixa liquido: {item.fluxoDeCaixa}
+                                    Fluxo de caixa: R$: {item.fluxoDeCaixa.toFixed(2)}
                                     </Typography>
                                     
                                     <Typography className="pos" variant="h6">
-                                        Taixa de Desconto: {item.taixaDeDesconto}
+                                        Taixa de Desconto:  {item.taixaDeDesconto}% 
                                     </Typography>
                                     
                                     <Typography variant="h6" component="p">
-                                       Tempo de fluxo de caixa: {item.tempoFluxoDeCaixa}
+                                       T Fluxo de caixa: {item.tempoFluxoDeCaixa}
                                     </Typography>
                                 </CardContent>
                             </Card>                            
