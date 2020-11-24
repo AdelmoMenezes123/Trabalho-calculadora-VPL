@@ -17,19 +17,20 @@ export default ()=>{
         let controle = false;
 
         data.map(d =>{
-            if(d.nome.toUpperCase() != empresa.toUpperCase()){
-                if( id > 0 && id == d.id){
+            if(d.nome.toUpperCase() !== empresa.toUpperCase()){
+                if( id > 0 && id === d.id){
                     id++;
                 }
                 controle = true;
             }else{
                 controle = false
+                setEmpresa('')
                 alert("Erro: Empresa ja existe")
             }
         })
 
         if(controle && empresa.toUpperCase() != '' ){
-            data.push( {id:id, nome:empresa, fluxoDeCaixa:fluxo.toFixed(2) , taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo})
+            data.push( { nome:empresa, fluxoDeCaixa:fluxo, taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo})
             setEmpresa('')
             setFluxo(0)
             setTaxa(0)

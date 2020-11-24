@@ -17,7 +17,7 @@ export default ()=>{
                                     </Typography>
                                     
                                     <Typography component="h2" variant="h6">
-                                    Fluxo de caixa: R$: {item.fluxoDeCaixa.toFixed(2)}
+                                    Fluxo de caixa: R$: {item.fluxoDeCaixa}
                                     </Typography>
                                     
                                     <Typography className="pos" variant="h6">

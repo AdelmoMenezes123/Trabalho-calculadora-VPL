@@ -11,3 +11,25 @@
 .textFild:nth-last-child(1){
     padding-bottom: 5vh;
 }
+
+.cardCalculo{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 5vh;
+}
+
+.card1{
+    min-width: 250px;
+    max-width: 2500px;
+}
+.cardContent1{
+    height: 100px;
+    display: flex;
+    margin-top: 2px;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: #FAFAFA;
+    
+}
