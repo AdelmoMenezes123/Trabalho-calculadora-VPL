@@ -16,6 +16,9 @@ export default ()=>{
         return pmt / rate * (1 - Math.pow(1 + rate, -nper));
     }
 
+    // console.log("VALOR: ",VPL(2.5, 3, -2052.5).toFixed(2))
+    // console.log('vALORES PASSADO: VPL(2.5, 3, -2052.5)')
+
     let calcular = () =>{
         
         dados.map((emp)=>{
@@ -24,7 +27,11 @@ export default ()=>{
             if(pesquisa != '' && pesquisa != ' ' && pesquisa != '  '){
                 if( d === pesquisa.toLowerCase()){
                     setEmpresa(emp.nome)
-                    setResult(VPL( emp.tempoFluxoDeCaixa, emp.taixaDeDesconto, emp.fluxoDeCaixa))            
+                    let x = VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa).toFixed(2)
+                    // console.log("taxa -> ", emp.taixaDeDesconto)
+                    // console.log("tempo-> ",emp.tempoFluxoDeCaixa)
+                    // console.log("fluxo de caixa -> ",emp.fluxoDeCaixa)
+                    setResult(x)            
                 }
             }
         })
