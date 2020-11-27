@@ -11,13 +11,16 @@ export default ()=>{
     // const [] = useState();
 
 
-    let VPL = (rate, nper, pmt) => {
-        rate = parseFloat(rate)/ 100.0;
-        return pmt / rate * (1 - Math.pow(1 + rate, -nper));
-    }
+    let VPL = (tempo, desconto, fluxo) => {
+        
+        desconto = parseFloat(desconto) / 100
+        fluxo = fluxo * tempo;
+        return  fluxo /  Math.pow((1 + desconto), tempo)
 
-    // console.log("VALOR: ",VPL(2.5, 3, -2052.5).toFixed(2))
-    // console.log('vALORES PASSADO: VPL(2.5, 3, -2052.5)')
+
+        // rate = parseFloat(rate)/ 100.0;
+        // return pmt / rate * (1 - Math.pow(1 + rate, -nper));
+    }
 
     let calcular = () =>{
         
@@ -28,9 +31,6 @@ export default ()=>{
                 if( d === pesquisa.toLowerCase()){
                     setEmpresa(emp.nome)
                     let x = VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa).toFixed(2)
-                    // console.log("taxa -> ", emp.taixaDeDesconto)
-                    // console.log("tempo-> ",emp.tempoFluxoDeCaixa)
-                    // console.log("fluxo de caixa -> ",emp.fluxoDeCaixa)
                     setResult(x)            
                 }
             }
