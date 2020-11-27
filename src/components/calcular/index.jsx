@@ -12,14 +12,9 @@ export default ()=>{
 
 
     let VPL = (tempo, desconto, fluxo) => {
-        
         desconto = parseFloat(desconto) / 100
         fluxo = fluxo * tempo;
         return  fluxo /  Math.pow((1 + desconto), tempo)
-
-
-        // rate = parseFloat(rate)/ 100.0;
-        // return pmt / rate * (1 - Math.pow(1 + rate, -nper));
     }
 
     let calcular = () =>{
