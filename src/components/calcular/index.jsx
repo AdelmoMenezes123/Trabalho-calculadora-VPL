@@ -25,7 +25,7 @@ export default ()=>{
             if(pesquisa != '' && pesquisa != ' ' && pesquisa != '  '){
                 if( d === pesquisa.toLowerCase()){
                     setEmpresa(emp.nome)
-                    let x = VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa).toFixed(2)
+                    let x = Math.round(VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa)).toFixed(2)
                     setResult(x)            
                 }
             }
