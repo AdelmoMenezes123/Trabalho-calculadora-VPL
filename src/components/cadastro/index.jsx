@@ -9,6 +9,7 @@ export default ()=>{
     const [fluxo, setFluxo] = useState(0)
     const [taxa, setTaxa] = useState(0)
     const [tempo, setTempo] = useState(0)
+    const [investimento, setInvestimento] = useState(0)
 
     let cadastro = ()=>{
 
@@ -30,11 +31,12 @@ export default ()=>{
         })
 
         if(controle && empresa.toUpperCase() != '' ){
-            data.push( { nome:empresa, fluxoDeCaixa:fluxo, taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo})
+            data.push( { nome:empresa, fluxoDeCaixa:fluxo, taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo, investimento})
             setEmpresa('')
             setFluxo(0)
             setTaxa(0)
             setTempo(0)
+            setInvestimento(0)
         }else{
             id--;
         }
@@ -55,6 +57,7 @@ export default ()=>{
                         <TextField label="Fluxo de caixa liquido" value={fluxo} onChange={e => setFluxo(e.target.value)} className="textFild" variant="filled" required></TextField>
                         <TextField label="Taxa de desconto" value={taxa} onChange={e => setTaxa(e.target.value)} className="textFild" variant="filled" required></TextField>
                         <TextField label="Tempo de fluxo de caixa" value={tempo} onChange={e => setTempo(e.target.value)} className="textFild" variant="filled" required></TextField>
+                        <TextField label="Investimento" value={investimento} onChange={e => setInvestimento(e.target.value)} className="textFild" variant="filled" required></TextField>
                     </Grid>    
     
                     <Grid justify="center" alignItems="center">

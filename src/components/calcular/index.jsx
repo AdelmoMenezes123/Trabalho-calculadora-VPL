@@ -11,26 +11,24 @@ export default ()=>{
     // const [] = useState();
 
 
-    let VPL = (tempo, desconto, fluxo) => {
-        desconto = parseFloat(desconto) / 100
+    var VPL = (tempo, desconto, fluxo, investimento) => {
         fluxo = fluxo * tempo;
-        return  fluxo /  Math.pow((1 + desconto), tempo)
+        desconto = parseFloat(desconto) / 100
+        return  investimento +(fluxo /  Math.pow((1 + desconto), tempo))
     }
 
     let calcular = () =>{
         
         dados.map((emp)=>{
             const d = emp.nome.toLowerCase();
-            
             if(pesquisa != '' && pesquisa != ' ' && pesquisa != '  '){
                 if( d === pesquisa.toLowerCase()){
                     setEmpresa(emp.nome)
-                    let x = Math.round(VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa)).toFixed(2)
-                    setResult(x)            
+                    let x = VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa, emp.investimento).toFixed(2)
+                    setResult(x)
                 }
             }
         })
-
     }
 
     

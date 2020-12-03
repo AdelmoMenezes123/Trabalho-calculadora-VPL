@@ -16,7 +16,7 @@ export default ()=>{
                                         {item.nome}
                                     </Typography>
                                     
-                                    <Typography component="h2" variant="h6">
+                                    <Typography  variant="h6">
                                     Fluxo de caixa: R$: {item.fluxoDeCaixa}
                                     </Typography>
                                     
@@ -24,8 +24,12 @@ export default ()=>{
                                         Taixa de Desconto:  {item.taixaDeDesconto}% 
                                     </Typography>
                                     
-                                    <Typography variant="h6" component="p">
+                                    <Typography variant="h6" >
                                        T Fluxo de caixa: {item.tempoFluxoDeCaixa}
+                                    </Typography>
+
+                                    <Typography variant="h6" className="pos">
+                                       Investimento: R$: {item.investimento}
                                     </Typography>
                                 </CardContent>
                             </Card>                            
