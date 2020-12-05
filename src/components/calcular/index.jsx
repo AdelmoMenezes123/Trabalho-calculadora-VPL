@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Button, Container, Grid, TextField, Typography} from '@material-ui/core'
 import './calcular.css'
 import dados from '../../data'
+import { AddRounded } from '@material-ui/icons'
 
 export default ()=>{
 
@@ -12,9 +13,20 @@ export default ()=>{
 
 
     var VPL = (tempo, desconto, fluxo, investimento) => {
-        fluxo = fluxo * tempo;
+        let valor = 0;
+        let f = 0;
+
         desconto = parseFloat(desconto) / 100
-        return  investimento +(fluxo /  Math.pow((1 + desconto), tempo))
+
+        for(let i= 1; i <= tempo; i++ ){
+            f = fluxo / Math.pow( (1 + desconto) , i ) 
+            valor = valor + f;
+        }
+
+        investimento = investimento / Math.pow( (1 + desconto), 0 )
+
+        return (valor + (investimento)).toFixed(2) 
+        
     }
 
     let calcular = () =>{
@@ -24,7 +36,7 @@ export default ()=>{
             if(pesquisa != '' && pesquisa != ' ' && pesquisa != '  '){
                 if( d === pesquisa.toLowerCase()){
                     setEmpresa(emp.nome)
-                    let x = VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa, emp.investimento).toFixed(2)
+                    let x = VPL( emp.tempoFluxoDeCaixa,emp.taixaDeDesconto, emp.fluxoDeCaixa, emp.investimento)
                     setResult(x)
                 }
             }

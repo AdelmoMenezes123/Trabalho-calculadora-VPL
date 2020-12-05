@@ -30,7 +30,7 @@ export default ()=>{
             }
         })
 
-        if(controle && empresa.toUpperCase() != '' ){
+        if(controle && empresa.toUpperCase()){
             data.push( { nome:empresa, fluxoDeCaixa:fluxo, taixaDeDesconto:taxa, tempoFluxoDeCaixa:tempo, investimento})
             setEmpresa('')
             setFluxo(0)
@@ -51,7 +51,6 @@ export default ()=>{
                         <Typography variant="h3">Cadastrar VPL</Typography>
                         <Typography variant="h6"> Cadastre os valores para conseguir calcular o VPL</Typography>
                     </Grid>
-                    
                     <Grid item className="grid" container direction="column" justify="space-between" alignItems="center">
                         <TextField label="Nome da empresa" value={empresa} onChange={e => setEmpresa(e.target.value)} className="textFild" variant="filled" required></TextField>
                         <TextField label="Fluxo de caixa liquido" value={fluxo} onChange={e => setFluxo(e.target.value)} className="textFild" variant="filled" required></TextField>
@@ -59,7 +58,6 @@ export default ()=>{
                         <TextField label="Tempo de fluxo de caixa" value={tempo} onChange={e => setTempo(e.target.value)} className="textFild" variant="filled" required></TextField>
                         <TextField label="Investimento" value={investimento} onChange={e => setInvestimento(e.target.value)} className="textFild" variant="filled" required></TextField>
                     </Grid>    
-    
                     <Grid justify="center" alignItems="center">
                         <Button justify="center" alignItems="center" variant="contained" color="primary" onClick={()=>cadastro()}> Cadastrar </Button>     
                     </Grid>
